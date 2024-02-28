@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>BasicInternet > login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+
+<style type="text/css">
+body {background-color: #EFEDE6; color: #0C4579; font-size: 12px; font-family: verdana;}
+
+textarea,input,select {
+background-color: #EFEDE6;
+border: 1px solid #0C4579;
+padding: 2px;
+margin: 1px;
+font-size: 14px;
+color: #808080;
+}
+
+a, a:link, a:visited, a:active { color: #AAAAAA; text-decoration: none; font-size: 10px; }
+a:hover { border-bottom: 1px dotted #c1c1c1; color: #AAAAAA; }
+img {border: none;}
+td { font-size: 14px; color: #7A7A7A; margin-bottom: 0; padding-bottom: 0; }
+h3 { margin-bottom: 0; padding-bottom: 0; }
+</style>
+
+</head>
+
+<body>
+$(if chap-id)
+<!--	<form name="sendin" action="$(link-login-only)" method="post"> -->
+	<form name="sendin" action="http://digi.futurecompetence.net" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+<!--
+<div align="center">
+<a href="$(link-login-only)?target=lv&amp;dst=$(link-orig-esc)">Latviski</a>
+</div>
+-->
+
+<table width="100%" style="margin-top: 10%; border: none;">
+
+    <tr>
+		<td align="center">
+			<button style="width:200px;height:100px;" onclick="window.location.href = 'http://gravidpluss.no';">FREE INTERNET ACCESS! </button>
+		</td>
+	</tr>
+
+    <tr>
+		<td align="center">
+			&nbsp;
+		</td>
+	</tr>
+
+	<tr>
+		<td align="center">
+			<table width="200px" style="border: 1px solid #0C4579; padding: 0px;" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" width="100%" style="border: none;">
+						<h4 style="color: #0C4579;">Voucher access for Internet</h4>
+					</td>
+				</tr>
+				<tr>
+					<td align="center" valign="middle" height="100" colspan="2">
+						<form name="login" action="$(link-login-only)" method="post"
+						    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+							<input type="hidden" name="dst" value="$(link-orig)" />
+							<input type="hidden" name="popup" value="true" />
+							<table width="100%">
+								<tr>
+									<td align="right">login</td>
+									<td>
+										<input style="width: 100px" name="username" type="text" value=""/>
+									</td>
+								</tr>
+								<tr>
+									<td align="right">password</td>
+									<td>
+										<!-- <input style="width: 100px" name="username" type="password" value="$(username)"/> -->
+										<input style="width: 100px" name="password" type="password"/>
+									</td>
+								</tr>
+								<tr>
+									<td>&nbsp;</td>
+									<td><input type="submit" value="Login" /></td>
+								</tr>
+							</table>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	
+
+	
+	
+	<tr>
+		<td align="center">
+			&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<hr width="260px" style="color: #0C4579;">
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<table style="border: none; padding: 0px;" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center">
+						<img src="img/BasicInternet.png" alt="Basic Internet" style="height: 80px;" />
+					</td>
+					<td align="center">
+						&nbsp;
+					</td>
+					<td align="center">
+						<a href="http://www.basicinternet.org" target="_blank" style="border: none;">
+							<h3 style="color: #0C4579; border: none;">BasicInternet.org</h3>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			&nbsp;
+		</td>
+	</tr>
+
+</table>
+
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+</body>
+</html>
